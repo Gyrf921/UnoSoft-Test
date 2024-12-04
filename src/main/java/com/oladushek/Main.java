@@ -7,12 +7,13 @@ import java.util.*;
 
 public class Main {
 
-    private final static String regex = "^\"\\d{11}\"$"; // маска для проверки корректности телефона (с "" в начале и конце)
+    //private final static String regex = "^\"\\d{11}\"$"; // маска для проверки корректности телефона (с "" в начале и конце)
+    private final static String regex = "^\"\\d+\\.\\d\"$";// маска для проверки корректности числа (с "" в начале и конце)
 
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader(args[0]));
+            reader = new BufferedReader(new FileReader(args[0])); //args[0]
 
             List<Set<String>> groups = new ArrayList<>(); // список групп - множеств, где индекс это номер группы
             List<Map<String, Integer>> parts = new ArrayList<>();  // Номер столбика -> {слово -> номер группы}
