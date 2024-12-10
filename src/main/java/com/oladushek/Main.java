@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            reader = new BufferedReader(new FileReader("E:\\JavaProject\\UnoSoft\\lng-big\\lng-big.csv")); //args[0]
+            reader = new BufferedReader(new FileReader(args[0])); //args[0]
 
             List<Set<String>> groups = new ArrayList<>(); // список групп - множеств, где индекс это номер группы
             List<Map<String, Integer>> parts = new ArrayList<>();  // Номер столбика -> {слово -> номер группы}
